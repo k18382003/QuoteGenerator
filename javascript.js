@@ -1,10 +1,22 @@
 let QuoteList = [];
 let txtQuote = document.getElementById("text");
 let txtArthor = document.getElementById("author");
-let BtnFB = document.getElementById("twitter");
+let BtnTw = document.getElementById("twitter");
 let BtnNextQuote = document.getElementById("new-quote");
 let quoteContainer = document.getElementById("quote-container")
 let loader = document.getElementById("loader");
+
+
+// facebook config
+window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '651288402819014',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v12.0'
+    });
+  };
+
 
 // Loading
 function loading(){
@@ -80,10 +92,9 @@ function tweetQuote(){
 
 
 BtnNextQuote.addEventListener('click', newQuote);
-BtnFB.addEventListener('click', tweetQuote);
+BtnTw.addEventListener('click', tweetQuote);
 
 getQuote();
-
 
 
   
