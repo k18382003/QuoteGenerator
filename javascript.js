@@ -10,7 +10,7 @@ let loader = document.getElementById("loader");
 // facebook config
 window.fbAsyncInit = function() {
     FB.init({
-      appId            : '651288402819014',
+      appId            : 'yourfacebookid',
       autoLogAppEvents : true,
       xfbml            : true,
       version          : 'v12.0'
